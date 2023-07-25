@@ -1,0 +1,346 @@
+
+.Container{
+  padding: 2rem;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+
+
+.Header h1{
+  margin: 1rem 0 ;
+
+}
+
+.Button{
+  font-size: medium;
+  padding: 0.3rem;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0.4rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
+}
+
+.Controls{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ButtonControls{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+}
+
+.ButtonControls p{
+  color: #8f8f8f;
+}
+
+.SearchBar{
+  min-width:25%;
+}
+
+input{
+  padding: 0.7rem;
+  color:rgba(0, 0, 0, 0.521);
+  border:none;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
+}
+
+::placeholder { 
+  color: #000000;
+  opacity: 0.5; 
+}
+
+.CardCont{
+  display: flex;
+  flex-direction: column-reverse;
+  gap:1rem;
+  padding: 1rem;
+  
+}
+
+.Card{
+  display: flex;
+  justify-content: space-between;
+  background-color: #F3F4F6;
+  padding:1rem;
+  border-radius: 0.5rem;
+}
+
+.Card .LeftCard{
+  display: flex;
+  gap:1rem;
+  overflow: hidden;
+  
+}
+
+.Card .Handle{
+  display: flex;
+  align-items: flex-start;
+}
+
+.Handle img{
+  width: 1.6rem;
+}
+
+.Card .Details{
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  max-width: 80%;
+  white-space: nowrap;
+  
+}
+
+.Card .Title{
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+
+.Card .AuthDate{
+  display: flex;
+  gap: 1rem;
+  font-weight: 600;
+  color:#969696
+}
+
+.AuthDate img{
+  width: 1.5rem;
+}
+
+.AuthDate span{
+  display: flex;
+  align-items: center;
+  gap:0.5rem;
+}
+
+.Card .ShortCont{
+  display: flex;
+}
+
+.Card .Content{
+  color: #969696;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+
+.Card .ReadFull{
+  display: flex;
+  align-items: center;
+  color:#4E8DF6;
+  cursor: pointer;
+}
+
+.Card img{
+  width: 1.5rem;
+}
+
+
+.Card .Hashtags{
+  display: flex;
+  align-items: flex-start;
+  gap:0.5rem;
+}
+
+
+.Modal{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.Modal input{
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+
+.ModalBG{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.ModalCard{
+  width: 35rem;
+  height: 80%;
+  position: relative;
+  z-index: 10;
+  background-color: #FFFFFF;
+  display: flex;
+  padding: 3rem;
+  border-radius: 0.5rem;
+}
+
+.ModalCard .ModalDetails{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.ModalDetails .Head{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ModalDetails .Head div{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.ModalDetails .Body{
+  width: 100%;
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap:1rem;
+}
+
+
+.ModalDetails h1{
+  font-size: larger;
+}
+
+.ModalDetails p{
+  color:#969696
+}
+
+.Modal .CloseButton{
+  width: 1.5rem;
+  height: 1.5rem;
+  color:#969696;
+  background-color: #F3F4F6;
+  border-radius: 5rem;
+  float: right;
+  text-align: center;
+
+}
+
+.ModalDetails .Body textarea{
+  height: 85%;
+  border: 0.2rem dotted #000000;
+}
+
+textarea{
+  resize: none;
+  padding: 1rem;
+  font-family: Tahoma, sans-serif;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+  border-radius: 0.3rem;
+}
+
+textarea:hover{
+  border-color: black;
+}
+
+.ModalDetails .Buttons{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.ModalCard .ModalPublish{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: space-between;
+
+}
+
+.ModalPublish label{
+  font-size: large;
+}
+
+.ModalPublish input{
+  color:#000000;
+}
+
+.ModalPublish > div{
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+
+}
+
+.ModalPublish div:nth-child(1) button{
+  align-self: end;
+}
+
+.ModalPublish div:nth-child(3){
+  flex:1;
+}
+
+.ModalPublish textarea{
+  height: 100%;
+  border: none;
+}
+
+
+/* Medium Device Responsiveness */
+@media (max-width: 768px) { 
+  .Card .Hashtags{
+    flex-direction: column;
+    gap:0.3rem;
+  }
+
+}
+
+/* Small Device Responsiveness */
+@media (max-width: 640px) {
+  .CardCont{
+    padding: 1rem 0;
+    
+  }
+
+  .Controls{
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .Card{
+    flex-direction: column;
+    gap:0.8rem;
+  }
+
+  .Card .Details{
+    max-width: 75%;
+    
+  }
+  
+  .Card .AuthDate{
+    flex-direction: column;
+    gap:0.3rem;
+  }
+
+  .Card .Hashtags{
+    flex-direction: row;
+    gap:0.5rem;
+    margin-left: 4rem;
+    max-width: 100%;
+    overflow-x: scroll;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .Hashtags::-webkit-scrollbar{
+    display: none;
+  }
+
+  .ModalCard{
+    width: 90%;
+  }
+}
